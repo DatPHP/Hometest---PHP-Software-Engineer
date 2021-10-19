@@ -81,8 +81,7 @@ class Orders extends Items
           echo "----------Order List include : ---------------\n";
           foreach ($this->item_list as $items)
           {
-              $items->get();
-              $items->itemprice($weight_coefficient,$dimension_coefficient,$free_by_product_type);
+               $items->get();
                echo "Fee by weight:  ".$items->feebyweight($weight_coefficient)."\n";
                echo "fee by dimension:  ".$items->feebydimension($dimension_coefficient)."\n";
                echo "shipping fee:  ".$items->shippingfee($weight_coefficient,$dimension_coefficient,$free_by_product_type)."\n";
